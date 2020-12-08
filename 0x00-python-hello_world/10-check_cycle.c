@@ -12,10 +12,10 @@ int check_cycle(listint_t *list)
 
 	if (list != NULL)
 	{
-		while (list && header && head->next)
+		while (list && header && header->next)
 		{
 			list = list->next;
-			header = neader->next->next;
+			header = header->next->next;
 			if (header == list)
 				return (1);
 		}
