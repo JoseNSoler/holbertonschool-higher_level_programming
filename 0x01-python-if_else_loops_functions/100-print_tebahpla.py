@@ -6,4 +6,4 @@ for x in range(122, 96, -1):
         y = 0
     else:
         y = 1
-    print(chr(x), end = "")
+    print("{}".format(chr(x)), end = "")
