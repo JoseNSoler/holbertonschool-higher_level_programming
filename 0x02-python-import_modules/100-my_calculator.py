@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-import sys
-from calculator_1 import add, sub, mul, div
-
 if __name__ == "__main__":
-    values_a = {'+': add, '-': sub, "*": mul, '/': div}
+    import sys
+    import calculator_1
 
     string = sys.argv
     leno = len(string) - 1
@@ -15,12 +13,14 @@ if __name__ == "__main__":
     num1, num2, switch = int(string[1]), int(string[3]), 0
 
     if(leno == 3):
-        for x in values_a or switch == 0:
-            if(str(string[2]) == x):
-                print("{:d} {:s} {:d} = ".format(num1, x, num2), end='')
-                print(values_a[x].__call__(num1, num2))
-                switch = 1
-                break
-        if(switch != 1):
+        if (sign == '+'):
+            print("{:d} + {:d} = {:d}".format(num1, num2, calculator_1.add(num1, num2)))
+        elif (sign == '-'):
+            print("{:d} + {:d} = {:d}".format(num1, num2, calculator_1.sub(num1, num2)))
+        elif (sign == '*'):
+            print("{:d} + {:d} = {:d}".format(num1, num2, calculator_1.mul(num1, num2)))
+        elif (sign == '/'):
+            print("{:d} + {:d} = {:d}".format(num1, num2, calculator_1.div(num1, num2)))
+        else:
             print("Unknown operator. Available operators: +, -, * and /")
             exit(1)
