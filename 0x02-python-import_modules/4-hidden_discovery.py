@@ -9,5 +9,3 @@ if __name__ == "__main__":
         temp = param[x]
         if(temp[0] != '_'):
             print("{:s}".format(param[x]))
-        else:
-            continue
