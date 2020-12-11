@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 import sys
 if __name__ == "__main__":
-    from calculator_1 import add, sub, mul, div
+    import calculator_1
 
-    values_a = {'+': add, '-': sub, '*': mul, '/': div}
+    values_a = {'+': add, '-': sub, "*": mul, '/': div}
 
     string = sys.argv
     leno = len(string) - 1
