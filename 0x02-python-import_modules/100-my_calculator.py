@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 import sys
-if __name__ == "__main__":
-    import calculator_1
+from calculator_1 import add, sub, mul, div
 
+if __name__ == "__main__":
     values_a = {'+': add, '-': sub, "*": mul, '/': div}
 
     string = sys.argv
