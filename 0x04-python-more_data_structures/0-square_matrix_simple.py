@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 # computes the square value of all integers of a matrix
 
+
 def square_matrix_simple(matrix=[]):
     cp_matrix = []
     for x in matrix:
