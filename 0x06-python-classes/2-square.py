@@ -6,7 +6,7 @@ class Square:
     '''square class'''
     def __init__(self, size=0):
         '''
-        first Init 
+        first Init
 
         Args: int to use for size
         '''
