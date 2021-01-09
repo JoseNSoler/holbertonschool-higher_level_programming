@@ -1,0 +1,103 @@
+====================================================
+ First tester-module 0-add_integer.txt - add_integer
+====================================================
+
+
+Usage 0-add_integer.py
+======================
+
+This module divides two numbers given by the user.
+
+``add_integer(a, b=98)``.
+
+The b parameter is setted by default, so isn't necessary a 
+second user argument
+
+
+
+First initialization
+====================
+
+Import module and function
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+
+
+Tests cases with numbers
+=============
+
+____
+    >>> add_integer(1, 2)
+    3
+
+____
+    >>> add_integer(100, -2)
+    98
+
+
+____
+    >>> add_integer(49, 30)
+    79
+
+
+
+Call with float arguments
+=========================
+
+____
+    >>> add_integer(2.0, 3.0)
+    5
+
+
+____
+    >>> add_integer(2.9, 0.2)
+    2
+
+____
+    >>> add_integer(45.94, -2.1)
+    43
+
+____
+    >>> add_integer(2.3, -3)
+    -1
+
+
+Second arguments by default is 98
+=================================
+
+____
+    >>> add_integer(2)
+    100
+
+
+
+Tests non-Numbers
+=================
+
+____
+    >>> add_integer("hello", 3)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+____
+    >>> add_integer(2, "hello")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+
+
+Mathematical Tests or OverflowError tests
+=========================================
+
+____
+    >>> add_integer(100e+1000, 4)
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+____
+     >>> add_integer(float('inf'))
+     Traceback (most recent call last):
+     ...
+     OverflowError: cannot convert float infinity to integer
