@@ -1,0 +1,87 @@
+====================================================
+ Third tester-module -- 3-say_my_name.txt
+====================================================
+
+
+
+Usage 3-say_my_name.txt
+======================
+
+This module prints: 
+My name is ``first_name`` ``last_name`` 
+
+``def say_my_name(first_name, last_name="")``.
+
+The ``second_parameter`` is setted by default, so isn't necessary a 
+second user argument
+
+
+
+
+First initialization
+====================
+
+Import module and function
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+
+
+
+Tests cases with normal strings
+=============
+
+
+Say my name
+____
+    >>> say_my_name("Walter", "White")
+    My name is Walter White
+
+
+No, I'm the cook. I'm the man who killed
+____
+    >>> say_my_name("Gustavo", "Fring")
+    My name is Gustavo Fring
+
+
+Now say my name.
+____
+    >>> say_my_name("Heinsenberg")
+    My name is Heinsenberg 
+
+You are goddang right
+
+
+Parameter type errors
+====================
+
+One parameter is an array
+____
+    >>> say_my_name("First", ["1", "2", "3"])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+
+One parameter is an int or float
+____
+    >>> say_my_name(700, "dnoB")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+
+
+Exceptions
+==========
+
+None Parameters
+____
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+
+Empty Parameters
+____
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
