@@ -1,0 +1,108 @@
+====================================================
+ First tester-module 1-my_list.py - My list class
+====================================================
+
+
+Usage 1-my_list.py
+======================
+
+This module creates a list, and has a public method to print in
+a sorted way
+
+``my_list2 = MyList([4, 1, 3, 2]))``.
+
+
+
+First initialization
+====================
+
+Import module and function
+
+    >>> MyList = __import__('1-my_list').MyList
+
+
+
+Tests cases with numbers
+=============
+
+Simple usage with ``append()`` method
+____
+    >>> my_list = MyList()
+    >>> my_list.append(1)
+    >>> my_list.append(2)
+    >>> my_list.append(3)
+    >>> print(my_list)
+    [1, 2, 3]
+
+
+You also can handle indexing 
+____
+    >>> my_list[0] = 9
+    >>> print(my_list)
+    [9, 2, 3]
+
+
+And remove item with the ``remove()`` method
+____
+    >>> my_list.remove(9)
+    >>> print(my_list)
+    [2, 3]
+
+
+
+``print_sorted`` Method
+=========================
+
+The class contain a public instance method called ``print_sorted(self)``
+____
+    >>> my_list = MyList([2, 3, 9])
+    >>> my_list.print_sorted()
+    [2, 3, 9]
+
+
+In the call with arguments, a TypeError is raised
+____
+    >>> my_list.print_sorted(1)
+    Traceback (most recent call last):
+    TypeError: print_sorted() takes 1 positional argument but 2 were given
+
+
+If an argument is an non sorted type data, a TypeError raises
+____
+    >>> my_list = MyList([1, 2, 3, "5"])
+    >>> my_list.print_sorted()
+    Traceback (most recent call last):
+    TypeError: unorderable types: str() < int()
+
+
+
+Tests non-Numbers
+=================
+
+You can create a string data type list
+____
+    >>> my_list = MyList()
+    >>> my_list.append("Jose")
+    >>> my_list.append("Nicolas")
+    >>> my_list.append("Soler")
+    >>> my_list.append("Holberton")
+    >>> my_list.append("Betty")
+    >>> print(my_list)
+    ['Jose', 'Nicolas', 'Soler', 'Holberton', 'Betty']
+
+
+And, you could sort a list with ALL his variables of a same type
+____
+    >>> my_list.print_sorted()
+    ['Betty', 'Holberton', 'Jose', 'Nicolas', 'Soler']
+
+
+
+Common errors and exceptions
+=========================================
+
+No arguments
+____
+    >>> my_list = MyList()
+    >>> print(my_list.print_sorted)
+    <bound method MyList.print_sorted of []>

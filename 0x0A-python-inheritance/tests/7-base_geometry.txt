@@ -1,0 +1,100 @@
+====================================================
+ Second tester-module 7-base_geometry.py - Base geometry
+====================================================
+
+
+Usage 7-base_geometry
+======================
+
+Class with only a method-validator ``integer_validator `` 
+for the second argument
+
+``bg.integer_validator("width", 89)``.
+
+We assume the first arguments always will be a ``string``
+
+Second argument must be an integer bigger than 0, otherwise
+raise error
+
+
+First initialization
+====================
+
+Import module and function
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+
+Firs initialization
+=============
+
+Let's create an object
+____
+    >>> bg = BaseGeometry()
+
+
+
+Methods
+=======
+
+``integer_validator`` takes two arguments with expected correct arguments
+____
+    >>> bg.integer_validator("width", 89)
+    >>> type(bg)
+    <class '7-base_geometry.BaseGeometry'>
+
+
+``area`` Area of base - Temporarily out of service
+____
+    >>> bg.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+
+____
+    >>> print(bg) # doctest: +ELLIPSIS
+    <7-base_geometry.BaseGeometry object at ...>
+
+
+
+``integer_validator`` Arguments Errors
+======================================
+
+Second argument is a float
+____
+    >>> bg.integer_validator("example", 25.50)
+    Traceback (most recent call last):
+    TypeError: example must be an integer
+
+
+Second argument is a infinite
+____
+    >>> bg.integer_validator("example2", 100e+1000)
+    Traceback (most recent call last):
+    TypeError: example2 must be an integer
+
+Second argument is a string
+____
+    >>> bg.integer_validator("example3", "veinte")
+    Traceback (most recent call last):
+    TypeError: example3 must be an integer
+
+
+
+
+Common errors and exceptions
+=========================================
+
+No arguments
+____
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+
+None arguments
+____
+    >>> bg.integer_validator(None)
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
