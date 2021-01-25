@@ -17,7 +17,7 @@ class BaseGeometry:
             value: User's given value (must be value, otherwise 
             rise TypeError and ValueError)
         '''
-        if not isinstance(value, int):
+        if not isinstance(value, int) or isinstance(value, bool):
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
