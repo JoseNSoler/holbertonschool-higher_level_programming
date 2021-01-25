@@ -25,6 +25,6 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         '''Predefined string for object Rectangle '''
-
-        pre_str = "[Rectangle] "+str(self.__width)+"/"+str(self.__height)
+        pre_str = "[" + str(self.__class__.__name__) + "] "
+        pre_str += str(self.__width)+"/"+str(self.__height)
         return pre_str
