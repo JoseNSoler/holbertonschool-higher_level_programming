@@ -18,3 +18,13 @@ class Rectangle(BaseGeometry):
             self.__width = width
         if (not super(Rectangle, self).integer_validator("height", height)):
             self.__height = height
+
+    def area(self):
+        '''Returns area of base'''
+        return (self.__height * self.__width)
+
+    def __str__(self):
+        '''Predefined string for object Rectangle '''
+
+        pre_str = "[Rectangle] "+str(self.__width)+"/"+str(self.__height)
+        return pre_str
