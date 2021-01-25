@@ -6,7 +6,6 @@ r = Rectangle(4, 5)
 print(r)
 print(dir(r))
 
-print(r.width)
 
 try:
     print("Rectangle: {} - {}".format(r.width, r.height))
