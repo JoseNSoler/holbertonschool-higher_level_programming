@@ -10,6 +10,6 @@ def write_file(filename="", text=""):
         text: text to write
     '''
 
-    with open(filename, 'r+', encoding='utf8') as f:
+    with open(filename, 'w', encoding='utf8') as f:
         return f.write(text)
     f.closed
