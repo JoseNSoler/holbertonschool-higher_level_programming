@@ -18,7 +18,19 @@ class Student(object):
         self.last_name = last_name
         self.age = age
 
-    def to_json(self):
+    def to_json(self, attrs=None):
         '''Returns a structure data of our Class '''
-        obj_att = self.__dict__
-        return (obj_att)
+        x = 0
+        if attrs is not None:
+            for elem in attrs:
+                if (type(elem) == str):
+                    x += 1
+
+        if (type(attrs) == list and x == len(attrs)):
+            dicto = {}
+            for y in attrs:
+                if hasattr(self, y):
+                    tmp = getattr(self, y)
+                    dicto[y] = tmp
+            return dicto
+        return self.__dict__
