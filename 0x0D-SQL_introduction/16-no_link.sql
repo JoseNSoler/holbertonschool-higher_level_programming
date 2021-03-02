@@ -1,3 +1,4 @@
+-- AND NOW... SAY MY NAME
 -- List in descending order score and name in `second_table`.
 SELECT `score`, `name`
 FROM `second_table`
