@@ -3,7 +3,7 @@
 USE `hbtn_0c_0`;
 
 -- Average temperature of cities.
-SELECT `State`, MAX(`value`) AS `max_temp`
+SELECT `State` AS `state`, MAX(`value`) AS `max_temp`
 FROM `temperatures`
 GROUP BY `State`
 ORDER BY `State` ASC;
