@@ -1,5 +1,4 @@
--- convert all of the following to UTF8 in database `first_table`.
-
+-- Convert all of the following to UTF8 in database `first_table`.
 -- User of database.
 USE `hbtn_0c_0`;
 
