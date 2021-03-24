@@ -2,7 +2,7 @@
 const arr = [];
 
 if (isNaN(parseInt(process.argv[2])) || process.argv[2] === undefined) {
-  console.log('Missing number of occurrences');
+  console.log('Missing size');
 } else {
   let x = parseInt(process.argv[2]);
   let string = '';
