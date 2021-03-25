@@ -3,7 +3,8 @@
 
 const copyArgv = process.argv.slice(2).sort(function (a, b) { return b - a; });
 const empty = Boolean(isNaN(parseInt(process.argv[2])) ||
-                       process.argv[2] === undefined);
+                      process.argv[2] === undefined ||
+                      parseInt(process.argv[2]) === 1);
 
 if (empty) {
   console.log(0);
@@ -16,5 +17,3 @@ if (empty) {
     }
   });
 }
-
-console.log(copyArgv);
