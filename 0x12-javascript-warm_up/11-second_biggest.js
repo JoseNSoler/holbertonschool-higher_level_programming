@@ -11,12 +11,12 @@ if (empty) {
   const maxNum = copyArgv[0];
   if (maxNum === '1') {
     console.log(0);
-    return process.exit(1);
+  } else {
+    copyArgv.forEach((val, index) => {
+      if (val !== maxNum) {
+        console.log(val);
+        return process.exit(1);
+      }
+    });
   }
-  copyArgv.forEach((val, index) => {
-    if (val !== maxNum) {
-      console.log(val);
-      return process.exit(1);
-    }
-  });
 }
