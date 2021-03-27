@@ -1,16 +1,11 @@
 #!/usr/bin/node
 // New instance square with print in C...
 
-const Rectangle = require('./4-rectangle.js');
-
-class Square extends Rectangle {
-  constructor(size){
-    super(size, size);
-  }
-
-  charPrint(c){
-    if (c === undefined) c = 'x'
-    super.print(c);
+class Square extends require('./5-square.js') {
+  charPrint (c) {
+    const status = Boolean(c === undefined);
+    if (status) super.print();
+    if (!status) for (let x = 0; x < this.height; x++) console.log(c.repeat(this.width));
   }
 }
 
