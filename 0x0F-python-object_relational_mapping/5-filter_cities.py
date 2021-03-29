@@ -12,10 +12,12 @@ def deleteChar(strArg):
         strArg = strArg.replace(ch, "")
     return (strArg)
 
+
 def execCommSQL(strComm):
     '''Execute x sql command '''
+
     cursor.execute(strComm)
-    principalRows = cursor.fetchall() 
+    principalRows = cursor.fetchall()
     return (principalRows)
 
 if __name__ == "__main__":
