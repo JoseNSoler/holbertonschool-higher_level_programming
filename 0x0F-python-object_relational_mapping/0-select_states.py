@@ -20,6 +20,4 @@ if __name__ == "__main__":
     principalRows = cursor.fetchall()
 
     for row in principalRows:
-        print (row)
-
-
+        print(row)
