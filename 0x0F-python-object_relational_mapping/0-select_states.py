@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-'Display content on a database'
+'''Display content on a database'''
 
 import sys
 import MySQLdb
 
 if __name__ == "__main__":
+    '''Module'''
     database = MySQLdb.connect(
         host='localhost',
         user=sys.argv[1],
