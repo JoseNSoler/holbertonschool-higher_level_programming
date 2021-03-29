@@ -15,7 +15,7 @@ if __name__ == "__main__":
     )
 
     cursor = database.cursor()
-    
+
     cursor.execute("""SELECT id, name
                     FROM states
                     ORDER BY id ASC""")
@@ -23,4 +23,5 @@ if __name__ == "__main__":
 
     for row in principalRows:
         strRow = str(row)
-        if row [1][0] == "N": print(row)
+        if row[1][0] == "N":
+            print(row)
